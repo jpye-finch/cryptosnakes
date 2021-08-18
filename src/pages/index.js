@@ -2,8 +2,7 @@ import React from 'react';
 import Layout from '../components/layout.js';
 import Header from '../components/header.js';
 import FAQ from '../components/faq.js';
-
-import '/Users/jpf/Documents/www/cryptosnakes/src/styles/global.css';
+import '../styles/global.css';
 import Hero from '../components/hero.js';
 
 
