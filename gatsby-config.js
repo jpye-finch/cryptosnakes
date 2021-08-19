@@ -8,13 +8,6 @@ module.exports = {
     "gatsby-plugin-image",
     "gatsby-plugin-postcss",
     "gatsby-transformer-remark",
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: path.join(__dirname, `src`, `images`),
-      },
-    },
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
   ],
