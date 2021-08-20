@@ -1,0 +1,26 @@
+[
+  {
+      "id": "1",
+      "name": "Snake 1",
+      "slug": "snake-1",
+      "series": "1",
+      "img": "./images/s-thumb.png",
+      "alt": "SmartSnake 1'"
+    },  
+    {
+      "id": "2",
+      "name": "Snake 2",
+      "slug": "snake-2",
+      "series": "1",
+      "img": "./images/s-thumb.png",
+      "alt": "SmartSnake 1'"
+    }, 
+    {
+      "id": "3",
+      "name": "Snake3",
+      "slug": "snake-3",
+      "series": "1",
+      "img": "./images/s-thumb.png",
+      "alt": "SmartSnake 1'"
+    }  
+  ]

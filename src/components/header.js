@@ -1,5 +1,5 @@
 import React from 'react'
-import FiestaImg from "../images/snake.svg"
+import FiestaImg from "../data/images/snake.svg"
 import { Link } from "gatsby"
 
 

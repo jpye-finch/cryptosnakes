@@ -1,9 +1,18 @@
 import React from 'react';
-import { Link } from "gatsby"
+import { Link, useStaticQuery, graphql } from 'gatsby'
 
 
-class Navbar extends React.Component {
-  render() {
+const Navbar = ( {pageTitle} ) => {
+    const data = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          title
+        }
+      }
+    }
+  `)
+
     return (
     <div>
         <nav class="dark:bg-gray-800 ">
@@ -11,8 +20,7 @@ class Navbar extends React.Component {
                 <div class="flex items-center justify-between h-16">
                     <div class="w-full justify-between flex items-center">
                     <Link to="/"><span class="text-lg font-bold">
-            Cryptosnakes
-          </span>
+                    {data.site.siteMetadata.title}          </span>
           </Link>
                <div class="hidden md:block">
                             <div class="ml-10 flex items-center space-x-2">
@@ -77,7 +85,6 @@ class Navbar extends React.Component {
         </nav>
     </div>
     )
-  }
 }
 
 export default Navbar
