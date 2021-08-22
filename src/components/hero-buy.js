@@ -1,29 +1,25 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
 
- const HeroBuy = () => {
+function HeroBuy() {
+    const [totalReactPackages, setTotalReactPackages] = useState(null);
+
+    useEffect(() => {
+        // GET request using fetch inside useEffect React hook
+        fetch('https://api.nft-maker.io/GetCounts/d7b3879ed8484606abb6a093bc11cdf4/16716')
+            .then(response => response.json())
+            .then(data => setTotalReactPackages(data.nftTotal));
+            console.log({setTotalReactPackages})
+    // empty dependency array means this effect will only run once (like componentDidMount in classes)
+    }, []);
+
+
     return (
-<div class="h-96 dark:bg-gray-800 ">
-    <div class="text-center w-full mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 z-20">
-        <h1 class="text-4xl font-extrabold text-black dark:text-white sm:text-4xl">
-            <span class="block">
-            Get your hands on a
-            </span>
-            <span class="block text-indigo-500">
-            snake from our first series
-            </span>
-        </h1>
-        <p class="text-xl mt-4 max-w-xl mx-auto text-gray-400">
-        Only ?? remaining, get yours now within 5 minutes of payment.</p>
-        <div class="lg:mt-0 lg:flex-shrink-0">
-            <div class="mt-12 inline-flex rounded-md shadow">
-                <button type="button" class="btn-primary">
-                    Buy now
-                </button>
+        <div className="card text-center m-3">
+            <h5 className="card-header">GET Request with React Hooks</h5>
+            <div className="card-body">
+                Total react packages: {totalReactPackages}
             </div>
         </div>
-    </div>
-</div>
-    )
+    );
 }
-
  export default HeroBuy

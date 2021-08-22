@@ -1,15 +1,19 @@
-import React from 'react';
+import React, { useState, useEffect } from "react"
+import { graphql, useStaticQuery } from "gatsby"
+import '../styles/global.css';
+
 import Layout from '../components/layout.js';
 import Header from '../components/header.js';
-import {Snake}from '../components/snake.js';
+import {Snake} from '../components/snake.js';
 import FAQ from '../components/faq.js';
 import HeroBuy from '../components/hero-buy.js';
 import { Link } from "gatsby"
-import '../styles/global.css';
 import HeroIntro from '../components/hero-intro.js';
 
 
 const IndexPage = () => {
+
+
   return (
       <Layout>
         <Header/>

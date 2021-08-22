@@ -13,7 +13,7 @@ import React from 'react'
             </span>
         </h1>
         <p class="text-xl mt-4 max-w-md mx-auto text-gray-400">
-        A collection of hand drawn, non-randomized, digital collectibles with functionality.        </p>
+        A collection of hand drawn, non-randomized, digital collectibles       </p>
          </div>
   </div>
     )
