@@ -4,6 +4,10 @@ module.exports = {
     title: "cryptosnakes",
     description: "nft on Cardano"
   },
+  proxy: {
+    prefix: "/api",
+    url: "http://localhost:5000",
+  },
   plugins: [
     "gatsby-plugin-gatsby-cloud",
     "gatsby-plugin-image",

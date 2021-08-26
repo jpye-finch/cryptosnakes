@@ -5,7 +5,7 @@
       "slug": "snake-1",
       "series": "1",
       "img": "./images/s-thumb.png",
-      "alt": "SmartSnake 1'"
+      "alt": "SmartSnake 1"
     },  
     {
       "id": "2",
@@ -13,15 +13,15 @@
       "slug": "snake-2",
       "series": "1",
       "img": "./images/s-thumb.png",
-      "alt": "SmartSnake 1'"
-    }, 
+      "alt": "SmartSnake 2"
+    },  
     {
       "id": "3",
       "name": "Snake 3",
       "slug": "snake-3",
       "series": "1",
       "img": "./images/s-thumb.png",
-      "alt": "SmartSnake 1'"
+      "alt": "SmartSnake 3"
     }  
     
   ]

@@ -7,14 +7,18 @@
   "keywords": [
     "gatsby"
   ],
+  "proxy": "http://localhost:5000",
+
   "scripts": {
     "develop": "gatsby develop",
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
+    "start-api": "cd api && venv/bin/flask run --no-debugger",
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "@fontsource/balsamiq-sans": "^4.5.0",
     "@tailwindcss/typography": "^0.4.1",
     "daisyui": "^1.12.0",
     "gatsby": "^3.11.1",

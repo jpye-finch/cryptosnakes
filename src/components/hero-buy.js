@@ -1,25 +1,49 @@
 import React, { useState, useEffect } from 'react';
 
 function HeroBuy() {
-    const [totalReactPackages, setTotalReactPackages] = useState(null);
+
+    const [nftsTotal, nftsTotalData] = useState(0)
+    const [nftsFree, nftsFreeData] = useState(0)
+
 
     useEffect(() => {
-        // GET request using fetch inside useEffect React hook
-        fetch('https://api.nft-maker.io/GetCounts/d7b3879ed8484606abb6a093bc11cdf4/16716')
-            .then(response => response.json())
-            .then(data => setTotalReactPackages(data.nftTotal));
-            console.log({setTotalReactPackages})
-    // empty dependency array means this effect will only run once (like componentDidMount in classes)
-    }, []);
+        fetch("https://cors.bridged.cc/https://api.nft-maker.io/GetCounts/d7b3879ed8484606abb6a093bc11cdf4/16716/", 
+        { method: "GET",
+        headers: {
+            'Access-Control-Allow-Origin': '*',
+            'Content-Type': 'application/json'
+          }
+        })   
+        .then( response => response.json() )
+        .then(data => {
+            nftsTotalData(data.nftTotal)
+          }) 
+      }, [])
 
-
+    useEffect(() => {
+        fetch("https://cors.bridged.cc/https://api.nft-maker.io/GetCounts/d7b3879ed8484606abb6a093bc11cdf4/16716/", 
+        { method: "GET",
+        headers: {
+            'Access-Control-Allow-Origin': '*',
+            'Content-Type': 'application/json'
+          }
+        })   
+        .then( response => response.json() )
+        .then(data => {
+            nftsFreeData(data.free)
+          }) 
+      }, [])
+    
     return (
-        <div className="card text-center m-3">
-            <h5 className="card-header">GET Request with React Hooks</h5>
-            <div className="card-body">
-                Total react packages: {totalReactPackages}
-            </div>
-        </div>
+<div>
+<p>  
+                   {nftsTotal}, 
+                   {nftsFree}
+               </p>
+
+               </div>
+               
     );
 }
+
  export default HeroBuy
