@@ -6,7 +6,7 @@ module.exports = {
   },
   proxy: {
     prefix: "/api",
-    url: "http://localhost:5000",
+    url: "https://cryptosnakes.gatsbyjs.io/",
   },
   plugins: [
     "gatsby-plugin-gatsby-cloud",
